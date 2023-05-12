@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --Dark-cyan: #3c8067;
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Body & container*/
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: var(--Cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: var(--White);
+  width: 31em;
+  display: flex;
+  border-radius: 0.6em;
+}
+
+/*Left column*/
+.left-col {
+  width: 50%;
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  border-radius: 0.6em 0px 0px 0.6em;
+}
+/*Right column*/
+.right-col {
+  padding: 1.8em;
+  width: 50%;
+}
+.secondary-header {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 0.8em;
+}
+.right-col h1 {
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  margin-bottom: 0.8em;
+  color: var(--Very-dark-blue);
+  font-size: 1.5em;
+}
+.product-details {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.9em;
+  margin-bottom: 0.8em;
+}
+
+/*Price*/
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8em;
+}
+.sale {
+  margin-right: 0.8em;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  font-size: 1.8em;
+}
+.normal-price {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.6em;
+  text-decoration: line-through;
+  font-weight: 700;
+}
+/*Button*/
+button {
+  background-color: var(--Dark-cyan);
+  color: white;
+  padding: 0.6em 1.2em;
+  width: 100%;
+  border: none;
+  border-radius: 0.6em;
+  font-size: 0.9em;
+}
+button:hover {
+  background-color: #1e4839;
+}
+button img {
+  margin-right: 0.8em;
+}
+
+/*Media*/
+@media (max-width: 35em) {
+  .container {
+    width: 21em;
+    flex-direction: column;
+  }
+  .left-col {
+    height: 16em;
+    width: 100%;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    border-radius: 0.6em 0.6em 0px 0px;
+  }
+  .right-col {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
